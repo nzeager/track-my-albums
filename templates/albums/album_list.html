@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Music Collection
-        </title>
-    </head>
-    <body>
-        <p>Hi there!</p>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock title %}
+
+
+{% block content %}
+    <h1>Album List</h1>
+    {% for album in albums %}
+    <!-- Use double curly braces to render -->
+    <p>{{ album }}</p>
+    {% endfor %}
+{% endblock content %}
