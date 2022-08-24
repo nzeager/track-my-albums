@@ -10,6 +10,9 @@
             <div class="album-box">
                 <!-- Use double curly braces to render -->
                 <a href="{% url 'album_detail' pk=album.pk %}">{{ album }}</a>
+                <a class="btn btn-secondary" href="{% url 'album_edit' pk=album.pk %}">
+                    {% include './icons/pencil-fill.svg' %}
+                </a>
             </div>
         {% endfor %}
     </div>

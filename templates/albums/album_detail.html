@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <aside class="actions">
+        <a class="btn btn-secondary" href="{% url 'album_edit' pk=album.pk %}">
+            {% include './icons/pencil-fill.svg' %}
+        </a>
+    </aside>
     <h1>{{ album.title }} Details</h1>
     <div class="song-details">
         <p>Artist: {{ album.artist }}</p>

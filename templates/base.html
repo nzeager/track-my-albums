@@ -10,7 +10,7 @@
     <title>{% block title %} {% endblock title %}</title>
 </head>
 <body>
-    <header>Site Header
+    <header><a href="{% url 'album_list' %}">Site Header</a>
         <div class="new_album">
             <a href="{% url 'create_album' %}" class="top-menu">
                 {% include './albums/icons/file-earmark-plus.svg' %}
