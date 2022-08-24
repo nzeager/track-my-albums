@@ -5,8 +5,12 @@
 
 {% block content %}
     <h1>Album List</h1>
-    {% for album in albums %}
-    <!-- Use double curly braces to render -->
-    <a href="{% url 'album_detail' pk=album.pk %}">{{ album }}</a>
-    {% endfor %}
+    <div class="container">
+        {% for album in albums %}
+            <div class="album-box">
+                <!-- Use double curly braces to render -->
+                <a href="{% url 'album_detail' pk=album.pk %}">{{ album }}</a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}

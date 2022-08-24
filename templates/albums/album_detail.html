@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>{{ album }}</h1>
+    <h1>{{ album.title }} Details</h1>
+    <div class="song-details">
+        <p>Artist: {{ album.artist }}</p>
+        <p>Release Date: {{ album.release_date}}</p>
+    </div>
+    
 {% endblock content %}

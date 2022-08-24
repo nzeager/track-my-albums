@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Album
+from .forms import AlbumForm
 
 
 def album_list(request):
@@ -14,5 +15,15 @@ def album_detail(request, pk):
 
 
 # Finish
-# def create_album(request):
-#     return render(request, 'albums/create_album.html',{'form': form})
+def create_album(request):
+    if request.method == "POST":
+        form = AlbumForm(request.POST)
+        if form.is_valid():
+            album = form.save(commit=False)
+            album.artist = request.user
+            album.release_date = request.user
+            album.save()
+            return redirect('album_detail', pk=album.pk)
+    else:
+        form = AlbumForm()
+    return render(request, 'albums/create_album.html', {'form': form})
