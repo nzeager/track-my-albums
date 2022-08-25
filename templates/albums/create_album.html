@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>New Album</h1>
+    <h1>Fill in Album Details</h1>
     <form method="POST" class="album-form">{% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="save btn btn-secondary">Save</button>
