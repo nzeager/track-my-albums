@@ -1,8 +1,12 @@
+/* body */
+
 body {
     color: black;
     background-color: rgb(27, 148, 122);
     margin: 0;
 }
+
+/* hyperlinks */
 
 a {
     color: black;
