@@ -1,3 +1,61 @@
+body {
+    color: black;
+    background-color: rgb(27, 148, 122);
+    margin: 0;
+}
+
+a {
+    color: black;
+}
+/* header */
+
 header {
-    background-color: brown;
+    padding: 1rem;
+    background-color: rgb(131, 70, 189);
+    display: flex;
+    justify-content:space-between;
+}
+
+.site-name {
+    font-size: 2rem;
+}
+
+.btn-new {
+    align-self: flex-end;
+}
+
+/* general content */
+
+.content {
+    padding-left: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+/* album list page */
+
+.album-box {
+    display: flex;
+    justify-content:space-between;
+}
+
+.artist-list {
+    padding: 0 0 0.5rem 0.5rem;
+}
+
+/* album details page */
+
+.details-h1 {
+    display: flex;
+    justify-content:space-between;
+}
+
+.details-actions {
+    font-size: 1rem;
+}
+
+.song-details {
+    padding-left: 0.5rem;
 }

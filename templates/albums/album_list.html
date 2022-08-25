@@ -9,10 +9,18 @@
         {% for album in albums %}
             <div class="album-box">
                 <!-- Use double curly braces to render -->
-                <a href="{% url 'album_detail' pk=album.pk %}">{{ album }}</a>
-                <a class="btn btn-secondary" href="{% url 'album_edit' pk=album.pk %}">
-                    {% include './icons/pencil-fill.svg' %}
-                </a>
+                <a href="{% url 'album_detail' pk=album.pk %}">{{ album.title }}</a>
+                <div class="list-actions">
+                    <a class="btn btn-edit" href="{% url 'album_edit' pk=album.pk %}">
+                        Edit {% include './icons/pencil-fill.svg' %}
+                    </a>
+                    <a class="btn btn-delete" href="{% url 'album_delete' pk=album.pk %}">
+                        Delete {% include './icons/trash.svg' %}
+                    </a>
+                </div>
+            </div>
+            <div class="artist-list">
+                <a href="{% url 'album_detail' pk=album.pk %}">by {{ album.artist}}</a>
             </div>
         {% endfor %}
     </div>
