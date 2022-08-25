@@ -20,7 +20,6 @@ def create_album(request):
         form = AlbumForm(request.POST)
         if form.is_valid():
             album = form.save()
-            album.save()
             return redirect('album_detail', pk=album.pk)
     else:
         form = AlbumForm()
