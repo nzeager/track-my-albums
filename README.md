@@ -1,5 +1,18 @@
 # Django Music Collection 🎵
 
+## Momentum Boot Camp Project 9
+
+Skills:
+
+- first django project
+- using models.py to create Album class
+- using urls.py and views.py to allow users to add, edit, or delete an album, view overall album list, or view individual album details
+- using html files in templates folder to set up page displays
+- using pk to track individual albums
+- using a for loop and object properties to display a list of objects and their details
+
+## Below are Project Directions
+
 Create an application to keep track of all the music albums you own. You can choose whatever fields you think an album should have, but it should have at least these three:
 
 - title
